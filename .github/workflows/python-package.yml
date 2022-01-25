@@ -37,4 +37,4 @@ jobs:
     - name: Publish with Twine
       run: |
         # publish the pacakge to repository using Twine
-        twine upload -r pypi-local dist/*
+        twine upload -r pypi dist/*
