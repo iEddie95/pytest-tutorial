@@ -33,7 +33,7 @@ jobs:
     - name: Build package
       run: |
         # build pacakge distributions
-        python -m build
+        python3 -m build
     - name: Publish with Twine
       run: |
         # publish the pacakge to repository using Twine
