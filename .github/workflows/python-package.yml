@@ -31,4 +31,4 @@ jobs:
         pytest -v
     - name: Publish with Twine
       run: |
-        twine upload --repository-url local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose dist/* 
+        twine upload --repository local dist/* -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose 
