@@ -32,4 +32,4 @@ jobs:
     - name: Publish with Twine
       run: |
         python -m build
-        twine upload --repository-url https://otomato.jfrog.io/artifactory/api/pypi/pypi-local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose dist/*
+        twine upload -r local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose dist/*
