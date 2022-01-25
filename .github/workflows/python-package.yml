@@ -37,4 +37,4 @@ jobs:
     - name: Publish with Twine
       run: |
         # publish the pacakge to repository using Twine
-        twine upload -r local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose dist/*
+        twine upload -r local dist/*
