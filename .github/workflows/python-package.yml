@@ -37,4 +37,5 @@ jobs:
     - name: Publish with Twine
       run: |
         # publish the pacakge to repository using Twine
-        twine upload --repository-url https://otomato.jfrog.io/artifactory/api/pypi/pypi-local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} dist/*
+        #twine upload --repository-url https://otomato.jfrog.io/artifactory/api/pypi/pypi-local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} dist/*
+        twine upload -r local dist/*
