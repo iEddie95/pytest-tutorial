@@ -29,7 +29,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -v
-    - name: Publish with Twine
+    - name: Build package
       run: |
         python -m build
-        twine upload -r local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose dist/*
+    - name: Publish with Twine
+      run: |
+        twine upload --repository-url local -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --verbose dist/*
